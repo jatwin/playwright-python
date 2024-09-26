@@ -62,3 +62,6 @@ class Download:
 
     async def cancel(self) -> None:
         return await self._artifact.cancel()
+
+    async def read_into_buffer(self) -> bytes:
+        return await self._artifact.read_info_buffer()

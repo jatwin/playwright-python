@@ -679,7 +679,7 @@ class Route(SyncBase):
         json: typing.Optional[typing.Any] = None,
         path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
         content_type: typing.Optional[str] = None,
-        response: typing.Optional["APIResponse"] = None
+        response: typing.Optional["APIResponse"] = None,
     ) -> None:
         """Route.fulfill
 
@@ -745,7 +745,7 @@ class Route(SyncBase):
         post_data: typing.Optional[typing.Union[typing.Any, str, bytes]] = None,
         max_redirects: typing.Optional[int] = None,
         max_retries: typing.Optional[int] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> "APIResponse":
         """Route.fetch
 
@@ -816,7 +816,7 @@ class Route(SyncBase):
         url: typing.Optional[str] = None,
         method: typing.Optional[str] = None,
         headers: typing.Optional[typing.Dict[str, str]] = None,
-        post_data: typing.Optional[typing.Union[typing.Any, str, bytes]] = None
+        post_data: typing.Optional[typing.Union[typing.Any, str, bytes]] = None,
     ) -> None:
         """Route.fallback
 
@@ -909,7 +909,7 @@ class Route(SyncBase):
         url: typing.Optional[str] = None,
         method: typing.Optional[str] = None,
         headers: typing.Optional[typing.Dict[str, str]] = None,
-        post_data: typing.Optional[typing.Union[typing.Any, str, bytes]] = None
+        post_data: typing.Optional[typing.Union[typing.Any, str, bytes]] = None,
     ) -> None:
         """Route.continue_
 
@@ -1054,7 +1054,7 @@ class WebSocket(SyncBase):
         event: str,
         predicate: typing.Optional[typing.Callable] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager:
         """WebSocket.expect_event
 
@@ -1087,7 +1087,7 @@ class WebSocket(SyncBase):
         event: str,
         predicate: typing.Optional[typing.Callable] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> typing.Any:
         """WebSocket.wait_for_event
 
@@ -1329,7 +1329,7 @@ class Mouse(SyncBase):
         self,
         *,
         button: typing.Optional[Literal["left", "middle", "right"]] = None,
-        click_count: typing.Optional[int] = None
+        click_count: typing.Optional[int] = None,
     ) -> None:
         """Mouse.down
 
@@ -1351,7 +1351,7 @@ class Mouse(SyncBase):
         self,
         *,
         button: typing.Optional[Literal["left", "middle", "right"]] = None,
-        click_count: typing.Optional[int] = None
+        click_count: typing.Optional[int] = None,
     ) -> None:
         """Mouse.up
 
@@ -1376,7 +1376,7 @@ class Mouse(SyncBase):
         *,
         delay: typing.Optional[float] = None,
         button: typing.Optional[Literal["left", "middle", "right"]] = None,
-        click_count: typing.Optional[int] = None
+        click_count: typing.Optional[int] = None,
     ) -> None:
         """Mouse.click
 
@@ -1410,7 +1410,7 @@ class Mouse(SyncBase):
         y: float,
         *,
         delay: typing.Optional[float] = None,
-        button: typing.Optional[Literal["left", "middle", "right"]] = None
+        button: typing.Optional[Literal["left", "middle", "right"]] = None,
     ) -> None:
         """Mouse.dblclick
 
@@ -1890,7 +1890,7 @@ class ElementHandle(JSHandle):
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
         force: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.hover
 
@@ -1952,7 +1952,7 @@ class ElementHandle(JSHandle):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.click
 
@@ -2025,7 +2025,7 @@ class ElementHandle(JSHandle):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.dblclick
 
@@ -2093,7 +2093,7 @@ class ElementHandle(JSHandle):
         ] = None,
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> typing.List[str]:
         """ElementHandle.select_option
 
@@ -2170,7 +2170,7 @@ class ElementHandle(JSHandle):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.tap
 
@@ -2227,7 +2227,7 @@ class ElementHandle(JSHandle):
         *,
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
-        force: typing.Optional[bool] = None
+        force: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.fill
 
@@ -2267,7 +2267,7 @@ class ElementHandle(JSHandle):
         self,
         *,
         force: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """ElementHandle.select_text
 
@@ -2326,7 +2326,7 @@ class ElementHandle(JSHandle):
         ],
         *,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.set_input_files
 
@@ -2374,7 +2374,7 @@ class ElementHandle(JSHandle):
         *,
         delay: typing.Optional[float] = None,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.type
 
@@ -2413,7 +2413,7 @@ class ElementHandle(JSHandle):
         *,
         delay: typing.Optional[float] = None,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.press
 
@@ -2471,7 +2471,7 @@ class ElementHandle(JSHandle):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.set_checked
 
@@ -2527,7 +2527,7 @@ class ElementHandle(JSHandle):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.check
 
@@ -2581,7 +2581,7 @@ class ElementHandle(JSHandle):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """ElementHandle.uncheck
 
@@ -2671,7 +2671,7 @@ class ElementHandle(JSHandle):
         scale: typing.Optional[Literal["css", "device"]] = None,
         mask: typing.Optional[typing.Sequence["Locator"]] = None,
         mask_color: typing.Optional[str] = None,
-        style: typing.Optional[str] = None
+        style: typing.Optional[str] = None,
     ) -> bytes:
         """ElementHandle.screenshot
 
@@ -2890,7 +2890,7 @@ class ElementHandle(JSHandle):
             "disabled", "editable", "enabled", "hidden", "stable", "visible"
         ],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """ElementHandle.wait_for_element_state
 
@@ -2932,7 +2932,7 @@ class ElementHandle(JSHandle):
             Literal["attached", "detached", "hidden", "visible"]
         ] = None,
         timeout: typing.Optional[float] = None,
-        strict: typing.Optional[bool] = None
+        strict: typing.Optional[bool] = None,
     ) -> typing.Optional["ElementHandle"]:
         """ElementHandle.wait_for_selector
 
@@ -2996,7 +2996,7 @@ class Accessibility(SyncBase):
         self,
         *,
         interesting_only: typing.Optional[bool] = None,
-        root: typing.Optional["ElementHandle"] = None
+        root: typing.Optional["ElementHandle"] = None,
     ) -> typing.Optional[typing.Dict]:
         """Accessibility.snapshot
 
@@ -3106,7 +3106,7 @@ class FileChooser(SyncBase):
         ],
         *,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """FileChooser.set_files
 
@@ -3210,7 +3210,7 @@ class Frame(SyncBase):
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
         ] = None,
-        referer: typing.Optional[str] = None
+        referer: typing.Optional[str] = None,
     ) -> typing.Optional["Response"]:
         """Frame.goto
 
@@ -3277,7 +3277,7 @@ class Frame(SyncBase):
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
         ] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["Response"]:
         """Frame.expect_navigation
 
@@ -3337,7 +3337,7 @@ class Frame(SyncBase):
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
         ] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """Frame.wait_for_url
 
@@ -3385,7 +3385,7 @@ class Frame(SyncBase):
             Literal["domcontentloaded", "load", "networkidle"]
         ] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """Frame.wait_for_load_state
 
@@ -3623,7 +3623,7 @@ class Frame(SyncBase):
         timeout: typing.Optional[float] = None,
         state: typing.Optional[
             Literal["attached", "detached", "hidden", "visible"]
-        ] = None
+        ] = None,
     ) -> typing.Optional["ElementHandle"]:
         """Frame.wait_for_selector
 
@@ -3695,7 +3695,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Frame.is_checked
 
@@ -3731,7 +3731,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Frame.is_disabled
 
@@ -3767,7 +3767,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Frame.is_editable
 
@@ -3803,7 +3803,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Frame.is_enabled
 
@@ -3839,7 +3839,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Frame.is_hidden
 
@@ -3875,7 +3875,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Frame.is_visible
 
@@ -3913,7 +3913,7 @@ class Frame(SyncBase):
         event_init: typing.Optional[typing.Dict] = None,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """Frame.dispatch_event
 
@@ -3985,7 +3985,7 @@ class Frame(SyncBase):
         expression: str,
         arg: typing.Optional[typing.Any] = None,
         *,
-        strict: typing.Optional[bool] = None
+        strict: typing.Optional[bool] = None,
     ) -> typing.Any:
         """Frame.eval_on_selector
 
@@ -4095,7 +4095,7 @@ class Frame(SyncBase):
         timeout: typing.Optional[float] = None,
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
-        ] = None
+        ] = None,
     ) -> None:
         """Frame.set_content
 
@@ -4147,7 +4147,7 @@ class Frame(SyncBase):
         url: typing.Optional[str] = None,
         path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
         content: typing.Optional[str] = None,
-        type: typing.Optional[str] = None
+        type: typing.Optional[str] = None,
     ) -> "ElementHandle":
         """Frame.add_script_tag
 
@@ -4186,7 +4186,7 @@ class Frame(SyncBase):
         *,
         url: typing.Optional[str] = None,
         path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
-        content: typing.Optional[str] = None
+        content: typing.Optional[str] = None,
     ) -> "ElementHandle":
         """Frame.add_style_tag
 
@@ -4231,7 +4231,7 @@ class Frame(SyncBase):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Frame.click
 
@@ -4314,7 +4314,7 @@ class Frame(SyncBase):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Frame.dblclick
 
@@ -4392,7 +4392,7 @@ class Frame(SyncBase):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Frame.tap
 
@@ -4459,7 +4459,7 @@ class Frame(SyncBase):
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        force: typing.Optional[bool] = None
+        force: typing.Optional[bool] = None,
     ) -> None:
         """Frame.fill
 
@@ -4514,7 +4514,7 @@ class Frame(SyncBase):
         has_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has_not_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has: typing.Optional["Locator"] = None,
-        has_not: typing.Optional["Locator"] = None
+        has_not: typing.Optional["Locator"] = None,
     ) -> "Locator":
         """Frame.locator
 
@@ -4572,7 +4572,7 @@ class Frame(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Frame.get_by_alt_text
 
@@ -4609,7 +4609,7 @@ class Frame(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Frame.get_by_label
 
@@ -4650,7 +4650,7 @@ class Frame(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Frame.get_by_placeholder
 
@@ -4782,7 +4782,7 @@ class Frame(SyncBase):
         name: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         pressed: typing.Optional[bool] = None,
         selected: typing.Optional[bool] = None,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Frame.get_by_role
 
@@ -4929,7 +4929,7 @@ class Frame(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Frame.get_by_text
 
@@ -4993,7 +4993,7 @@ class Frame(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Frame.get_by_title
 
@@ -5061,7 +5061,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """Frame.focus
 
@@ -5092,7 +5092,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> typing.Optional[str]:
         """Frame.text_content
 
@@ -5128,7 +5128,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> str:
         """Frame.inner_text
 
@@ -5164,7 +5164,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> str:
         """Frame.inner_html
 
@@ -5201,7 +5201,7 @@ class Frame(SyncBase):
         name: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> typing.Optional[str]:
         """Frame.get_attribute
 
@@ -5246,7 +5246,7 @@ class Frame(SyncBase):
         no_wait_after: typing.Optional[bool] = None,
         force: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Frame.hover
 
@@ -5314,7 +5314,7 @@ class Frame(SyncBase):
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
         timeout: typing.Optional[float] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Frame.drag_and_drop
 
@@ -5377,7 +5377,7 @@ class Frame(SyncBase):
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        force: typing.Optional[bool] = None
+        force: typing.Optional[bool] = None,
     ) -> typing.List[str]:
         """Frame.select_option
 
@@ -5456,7 +5456,7 @@ class Frame(SyncBase):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> str:
         """Frame.input_value
 
@@ -5504,7 +5504,7 @@ class Frame(SyncBase):
         *,
         strict: typing.Optional[bool] = None,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """Frame.set_input_files
 
@@ -5553,7 +5553,7 @@ class Frame(SyncBase):
         delay: typing.Optional[float] = None,
         strict: typing.Optional[bool] = None,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """Frame.type
 
@@ -5605,7 +5605,7 @@ class Frame(SyncBase):
         delay: typing.Optional[float] = None,
         strict: typing.Optional[bool] = None,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """Frame.press
 
@@ -5673,7 +5673,7 @@ class Frame(SyncBase):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Frame.check
 
@@ -5737,7 +5737,7 @@ class Frame(SyncBase):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Frame.uncheck
 
@@ -5816,7 +5816,7 @@ class Frame(SyncBase):
         *,
         arg: typing.Optional[typing.Any] = None,
         timeout: typing.Optional[float] = None,
-        polling: typing.Optional[typing.Union[float, Literal["raf"]]] = None
+        polling: typing.Optional[typing.Union[float, Literal["raf"]]] = None,
     ) -> "JSHandle":
         """Frame.wait_for_function
 
@@ -5902,7 +5902,7 @@ class Frame(SyncBase):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Frame.set_checked
 
@@ -6022,7 +6022,7 @@ class FrameLocator(SyncBase):
         has_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has_not_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has: typing.Optional["Locator"] = None,
-        has_not: typing.Optional["Locator"] = None
+        has_not: typing.Optional["Locator"] = None,
     ) -> "Locator":
         """FrameLocator.locator
 
@@ -6077,7 +6077,7 @@ class FrameLocator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """FrameLocator.get_by_alt_text
 
@@ -6114,7 +6114,7 @@ class FrameLocator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """FrameLocator.get_by_label
 
@@ -6155,7 +6155,7 @@ class FrameLocator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """FrameLocator.get_by_placeholder
 
@@ -6287,7 +6287,7 @@ class FrameLocator(SyncBase):
         name: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         pressed: typing.Optional[bool] = None,
         selected: typing.Optional[bool] = None,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """FrameLocator.get_by_role
 
@@ -6434,7 +6434,7 @@ class FrameLocator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """FrameLocator.get_by_text
 
@@ -6498,7 +6498,7 @@ class FrameLocator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """FrameLocator.get_by_title
 
@@ -6676,7 +6676,7 @@ class Selectors(SyncBase):
         script: typing.Optional[str] = None,
         *,
         path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
-        content_script: typing.Optional[bool] = None
+        content_script: typing.Optional[bool] = None,
     ) -> None:
         """Selectors.register
 
@@ -6768,7 +6768,7 @@ class Clock(SyncBase):
     def install(
         self,
         *,
-        time: typing.Optional[typing.Union[float, str, datetime.datetime]] = None
+        time: typing.Optional[typing.Union[float, str, datetime.datetime]] = None,
     ) -> None:
         """Clock.install
 
@@ -7171,6 +7171,10 @@ class Download(SyncBase):
         """
 
         return mapping.from_maybe_impl(self._sync(self._impl_obj.cancel()))
+
+    def read_into_buffer(self) -> bytes:
+        """Download.read_into_buffer"""
+        return mapping.from_maybe_impl(self._sync(self._impl_obj.read_into_buffer()))
 
 
 mapping.register(DownloadImpl, Download)
@@ -7820,7 +7824,7 @@ class Page(SyncContextManager):
         *,
         url: typing.Optional[
             typing.Union[str, typing.Pattern[str], typing.Callable[[str], bool]]
-        ] = None
+        ] = None,
     ) -> typing.Optional["Frame"]:
         """Page.frame
 
@@ -7943,7 +7947,7 @@ class Page(SyncContextManager):
         state: typing.Optional[
             Literal["attached", "detached", "hidden", "visible"]
         ] = None,
-        strict: typing.Optional[bool] = None
+        strict: typing.Optional[bool] = None,
     ) -> typing.Optional["ElementHandle"]:
         """Page.wait_for_selector
 
@@ -8015,7 +8019,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Page.is_checked
 
@@ -8051,7 +8055,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Page.is_disabled
 
@@ -8087,7 +8091,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Page.is_editable
 
@@ -8123,7 +8127,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Page.is_enabled
 
@@ -8159,7 +8163,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Page.is_hidden
 
@@ -8195,7 +8199,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> bool:
         """Page.is_visible
 
@@ -8233,7 +8237,7 @@ class Page(SyncContextManager):
         event_init: typing.Optional[typing.Dict] = None,
         *,
         timeout: typing.Optional[float] = None,
-        strict: typing.Optional[bool] = None
+        strict: typing.Optional[bool] = None,
     ) -> None:
         """Page.dispatch_event
 
@@ -8419,7 +8423,7 @@ class Page(SyncContextManager):
         expression: str,
         arg: typing.Optional[typing.Any] = None,
         *,
-        strict: typing.Optional[bool] = None
+        strict: typing.Optional[bool] = None,
     ) -> typing.Any:
         """Page.eval_on_selector
 
@@ -8512,7 +8516,7 @@ class Page(SyncContextManager):
         url: typing.Optional[str] = None,
         path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
         content: typing.Optional[str] = None,
-        type: typing.Optional[str] = None
+        type: typing.Optional[str] = None,
     ) -> "ElementHandle":
         """Page.add_script_tag
 
@@ -8550,7 +8554,7 @@ class Page(SyncContextManager):
         *,
         url: typing.Optional[str] = None,
         path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
-        content: typing.Optional[str] = None
+        content: typing.Optional[str] = None,
     ) -> "ElementHandle":
         """Page.add_style_tag
 
@@ -8644,7 +8648,7 @@ class Page(SyncContextManager):
         name: str,
         callback: typing.Callable,
         *,
-        handle: typing.Optional[bool] = None
+        handle: typing.Optional[bool] = None,
     ) -> None:
         """Page.expose_binding
 
@@ -8745,7 +8749,7 @@ class Page(SyncContextManager):
         timeout: typing.Optional[float] = None,
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
-        ] = None
+        ] = None,
     ) -> None:
         """Page.set_content
 
@@ -8787,7 +8791,7 @@ class Page(SyncContextManager):
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
         ] = None,
-        referer: typing.Optional[str] = None
+        referer: typing.Optional[str] = None,
     ) -> typing.Optional["Response"]:
         """Page.goto
 
@@ -8853,7 +8857,7 @@ class Page(SyncContextManager):
         timeout: typing.Optional[float] = None,
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
-        ] = None
+        ] = None,
     ) -> typing.Optional["Response"]:
         """Page.reload
 
@@ -8892,7 +8896,7 @@ class Page(SyncContextManager):
             Literal["domcontentloaded", "load", "networkidle"]
         ] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """Page.wait_for_load_state
 
@@ -8948,7 +8952,7 @@ class Page(SyncContextManager):
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
         ] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """Page.wait_for_url
 
@@ -8995,7 +8999,7 @@ class Page(SyncContextManager):
         event: str,
         predicate: typing.Optional[typing.Callable] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> typing.Any:
         """Page.wait_for_event
 
@@ -9036,7 +9040,7 @@ class Page(SyncContextManager):
         timeout: typing.Optional[float] = None,
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
-        ] = None
+        ] = None,
     ) -> typing.Optional["Response"]:
         """Page.go_back
 
@@ -9076,7 +9080,7 @@ class Page(SyncContextManager):
         timeout: typing.Optional[float] = None,
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
-        ] = None
+        ] = None,
     ) -> typing.Optional["Response"]:
         """Page.go_forward
 
@@ -9120,7 +9124,7 @@ class Page(SyncContextManager):
         reduced_motion: typing.Optional[
             Literal["no-preference", "null", "reduce"]
         ] = None,
-        forced_colors: typing.Optional[Literal["active", "none", "null"]] = None
+        forced_colors: typing.Optional[Literal["active", "none", "null"]] = None,
     ) -> None:
         """Page.emulate_media
 
@@ -9222,7 +9226,7 @@ class Page(SyncContextManager):
         self,
         script: typing.Optional[str] = None,
         *,
-        path: typing.Optional[typing.Union[str, pathlib.Path]] = None
+        path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
     ) -> None:
         """Page.add_init_script
 
@@ -9267,7 +9271,7 @@ class Page(SyncContextManager):
             typing.Callable[["Route", "Request"], typing.Any],
         ],
         *,
-        times: typing.Optional[int] = None
+        times: typing.Optional[int] = None,
     ) -> None:
         """Page.route
 
@@ -9380,7 +9384,7 @@ class Page(SyncContextManager):
     def unroute_all(
         self,
         *,
-        behavior: typing.Optional[Literal["default", "ignoreErrors", "wait"]] = None
+        behavior: typing.Optional[Literal["default", "ignoreErrors", "wait"]] = None,
     ) -> None:
         """Page.unroute_all
 
@@ -9409,7 +9413,7 @@ class Page(SyncContextManager):
         not_found: typing.Optional[Literal["abort", "fallback"]] = None,
         update: typing.Optional[bool] = None,
         update_content: typing.Optional[Literal["attach", "embed"]] = None,
-        update_mode: typing.Optional[Literal["full", "minimal"]] = None
+        update_mode: typing.Optional[Literal["full", "minimal"]] = None,
     ) -> None:
         """Page.route_from_har
 
@@ -9473,7 +9477,7 @@ class Page(SyncContextManager):
         scale: typing.Optional[Literal["css", "device"]] = None,
         mask: typing.Optional[typing.Sequence["Locator"]] = None,
         mask_color: typing.Optional[str] = None,
-        style: typing.Optional[str] = None
+        style: typing.Optional[str] = None,
     ) -> bytes:
         """Page.screenshot
 
@@ -9568,7 +9572,7 @@ class Page(SyncContextManager):
         self,
         *,
         run_before_unload: typing.Optional[bool] = None,
-        reason: typing.Optional[str] = None
+        reason: typing.Optional[str] = None,
     ) -> None:
         """Page.close
 
@@ -9622,7 +9626,7 @@ class Page(SyncContextManager):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         trial: typing.Optional[bool] = None,
-        strict: typing.Optional[bool] = None
+        strict: typing.Optional[bool] = None,
     ) -> None:
         """Page.click
 
@@ -9705,7 +9709,7 @@ class Page(SyncContextManager):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Page.dblclick
 
@@ -9782,7 +9786,7 @@ class Page(SyncContextManager):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Page.tap
 
@@ -9849,7 +9853,7 @@ class Page(SyncContextManager):
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        force: typing.Optional[bool] = None
+        force: typing.Optional[bool] = None,
     ) -> None:
         """Page.fill
 
@@ -9904,7 +9908,7 @@ class Page(SyncContextManager):
         has_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has_not_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has: typing.Optional["Locator"] = None,
-        has_not: typing.Optional["Locator"] = None
+        has_not: typing.Optional["Locator"] = None,
     ) -> "Locator":
         """Page.locator
 
@@ -9960,7 +9964,7 @@ class Page(SyncContextManager):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Page.get_by_alt_text
 
@@ -9997,7 +10001,7 @@ class Page(SyncContextManager):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Page.get_by_label
 
@@ -10038,7 +10042,7 @@ class Page(SyncContextManager):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Page.get_by_placeholder
 
@@ -10170,7 +10174,7 @@ class Page(SyncContextManager):
         name: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         pressed: typing.Optional[bool] = None,
         selected: typing.Optional[bool] = None,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Page.get_by_role
 
@@ -10317,7 +10321,7 @@ class Page(SyncContextManager):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Page.get_by_text
 
@@ -10381,7 +10385,7 @@ class Page(SyncContextManager):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Page.get_by_title
 
@@ -10449,7 +10453,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """Page.focus
 
@@ -10480,7 +10484,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> typing.Optional[str]:
         """Page.text_content
 
@@ -10516,7 +10520,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> str:
         """Page.inner_text
 
@@ -10552,7 +10556,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> str:
         """Page.inner_html
 
@@ -10589,7 +10593,7 @@ class Page(SyncContextManager):
         name: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> typing.Optional[str]:
         """Page.get_attribute
 
@@ -10634,7 +10638,7 @@ class Page(SyncContextManager):
         no_wait_after: typing.Optional[bool] = None,
         force: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Page.hover
 
@@ -10702,7 +10706,7 @@ class Page(SyncContextManager):
         no_wait_after: typing.Optional[bool] = None,
         timeout: typing.Optional[float] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Page.drag_and_drop
 
@@ -10781,7 +10785,7 @@ class Page(SyncContextManager):
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
         force: typing.Optional[bool] = None,
-        strict: typing.Optional[bool] = None
+        strict: typing.Optional[bool] = None,
     ) -> typing.List[str]:
         """Page.select_option
 
@@ -10861,7 +10865,7 @@ class Page(SyncContextManager):
         selector: str,
         *,
         strict: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> str:
         """Page.input_value
 
@@ -10909,7 +10913,7 @@ class Page(SyncContextManager):
         *,
         timeout: typing.Optional[float] = None,
         strict: typing.Optional[bool] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """Page.set_input_files
 
@@ -10959,7 +10963,7 @@ class Page(SyncContextManager):
         delay: typing.Optional[float] = None,
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
-        strict: typing.Optional[bool] = None
+        strict: typing.Optional[bool] = None,
     ) -> None:
         """Page.type
 
@@ -11011,7 +11015,7 @@ class Page(SyncContextManager):
         delay: typing.Optional[float] = None,
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
-        strict: typing.Optional[bool] = None
+        strict: typing.Optional[bool] = None,
     ) -> None:
         """Page.press
 
@@ -11095,7 +11099,7 @@ class Page(SyncContextManager):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Page.check
 
@@ -11159,7 +11163,7 @@ class Page(SyncContextManager):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Page.uncheck
 
@@ -11245,7 +11249,7 @@ class Page(SyncContextManager):
         *,
         arg: typing.Optional[typing.Any] = None,
         timeout: typing.Optional[float] = None,
-        polling: typing.Optional[typing.Union[float, Literal["raf"]]] = None
+        polling: typing.Optional[typing.Union[float, Literal["raf"]]] = None,
     ) -> "JSHandle":
         """Page.wait_for_function
 
@@ -11341,7 +11345,7 @@ class Page(SyncContextManager):
         margin: typing.Optional[PdfMargins] = None,
         path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
         outline: typing.Optional[bool] = None,
-        tagged: typing.Optional[bool] = None
+        tagged: typing.Optional[bool] = None,
     ) -> bytes:
         """Page.pdf
 
@@ -11467,7 +11471,7 @@ class Page(SyncContextManager):
         event: str,
         predicate: typing.Optional[typing.Callable] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager:
         """Page.expect_event
 
@@ -11507,7 +11511,7 @@ class Page(SyncContextManager):
         self,
         predicate: typing.Optional[typing.Callable[["ConsoleMessage"], bool]] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["ConsoleMessage"]:
         """Page.expect_console_message
 
@@ -11538,7 +11542,7 @@ class Page(SyncContextManager):
         self,
         predicate: typing.Optional[typing.Callable[["Download"], bool]] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["Download"]:
         """Page.expect_download
 
@@ -11569,7 +11573,7 @@ class Page(SyncContextManager):
         self,
         predicate: typing.Optional[typing.Callable[["FileChooser"], bool]] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["FileChooser"]:
         """Page.expect_file_chooser
 
@@ -11605,7 +11609,7 @@ class Page(SyncContextManager):
         wait_until: typing.Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
         ] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["Response"]:
         """Page.expect_navigation
 
@@ -11664,7 +11668,7 @@ class Page(SyncContextManager):
         self,
         predicate: typing.Optional[typing.Callable[["Page"], bool]] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["Page"]:
         """Page.expect_popup
 
@@ -11697,7 +11701,7 @@ class Page(SyncContextManager):
             str, typing.Pattern[str], typing.Callable[["Request"], bool]
         ],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["Request"]:
         """Page.expect_request
 
@@ -11742,7 +11746,7 @@ class Page(SyncContextManager):
         self,
         predicate: typing.Optional[typing.Callable[["Request"], bool]] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["Request"]:
         """Page.expect_request_finished
 
@@ -11775,7 +11779,7 @@ class Page(SyncContextManager):
             str, typing.Pattern[str], typing.Callable[["Response"], bool]
         ],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["Response"]:
         """Page.expect_response
 
@@ -11822,7 +11826,7 @@ class Page(SyncContextManager):
         self,
         predicate: typing.Optional[typing.Callable[["WebSocket"], bool]] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["WebSocket"]:
         """Page.expect_websocket
 
@@ -11853,7 +11857,7 @@ class Page(SyncContextManager):
         self,
         predicate: typing.Optional[typing.Callable[["Worker"], bool]] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["Worker"]:
         """Page.expect_worker
 
@@ -11890,7 +11894,7 @@ class Page(SyncContextManager):
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
         strict: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Page.set_checked
 
@@ -11956,7 +11960,7 @@ class Page(SyncContextManager):
         ],
         *,
         no_wait_after: typing.Optional[bool] = None,
-        times: typing.Optional[int] = None
+        times: typing.Optional[int] = None,
     ) -> None:
         """Page.add_locator_handler
 
@@ -12602,7 +12606,7 @@ class BrowserContext(SyncContextManager):
         *,
         name: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         domain: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
-        path: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None
+        path: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
     ) -> None:
         """BrowserContext.clear_cookies
 
@@ -12753,7 +12757,7 @@ class BrowserContext(SyncContextManager):
         self,
         script: typing.Optional[str] = None,
         *,
-        path: typing.Optional[typing.Union[str, pathlib.Path]] = None
+        path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
     ) -> None:
         """BrowserContext.add_init_script
 
@@ -12795,7 +12799,7 @@ class BrowserContext(SyncContextManager):
         name: str,
         callback: typing.Callable,
         *,
-        handle: typing.Optional[bool] = None
+        handle: typing.Optional[bool] = None,
     ) -> None:
         """BrowserContext.expose_binding
 
@@ -12924,7 +12928,7 @@ class BrowserContext(SyncContextManager):
             typing.Callable[["Route", "Request"], typing.Any],
         ],
         *,
-        times: typing.Optional[int] = None
+        times: typing.Optional[int] = None,
     ) -> None:
         """BrowserContext.route
 
@@ -13035,7 +13039,7 @@ class BrowserContext(SyncContextManager):
     def unroute_all(
         self,
         *,
-        behavior: typing.Optional[Literal["default", "ignoreErrors", "wait"]] = None
+        behavior: typing.Optional[Literal["default", "ignoreErrors", "wait"]] = None,
     ) -> None:
         """BrowserContext.unroute_all
 
@@ -13064,7 +13068,7 @@ class BrowserContext(SyncContextManager):
         not_found: typing.Optional[Literal["abort", "fallback"]] = None,
         update: typing.Optional[bool] = None,
         update_content: typing.Optional[Literal["attach", "embed"]] = None,
-        update_mode: typing.Optional[Literal["full", "minimal"]] = None
+        update_mode: typing.Optional[Literal["full", "minimal"]] = None,
     ) -> None:
         """BrowserContext.route_from_har
 
@@ -13118,7 +13122,7 @@ class BrowserContext(SyncContextManager):
         event: str,
         predicate: typing.Optional[typing.Callable] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager:
         """BrowserContext.expect_event
 
@@ -13194,7 +13198,7 @@ class BrowserContext(SyncContextManager):
         event: str,
         predicate: typing.Optional[typing.Callable] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> typing.Any:
         """BrowserContext.wait_for_event
 
@@ -13233,7 +13237,7 @@ class BrowserContext(SyncContextManager):
         self,
         predicate: typing.Optional[typing.Callable[["ConsoleMessage"], bool]] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["ConsoleMessage"]:
         """BrowserContext.expect_console_message
 
@@ -13265,7 +13269,7 @@ class BrowserContext(SyncContextManager):
         self,
         predicate: typing.Optional[typing.Callable[["Page"], bool]] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> EventContextManager["Page"]:
         """BrowserContext.expect_page
 
@@ -13476,7 +13480,7 @@ class Browser(SyncContextManager):
         ] = None,
         record_har_mode: typing.Optional[Literal["full", "minimal"]] = None,
         record_har_content: typing.Optional[Literal["attach", "embed", "omit"]] = None,
-        client_certificates: typing.Optional[typing.List[ClientCertificate]] = None
+        client_certificates: typing.Optional[typing.List[ClientCertificate]] = None,
     ) -> "BrowserContext":
         """Browser.new_context
 
@@ -13720,7 +13724,7 @@ class Browser(SyncContextManager):
         ] = None,
         record_har_mode: typing.Optional[Literal["full", "minimal"]] = None,
         record_har_content: typing.Optional[Literal["attach", "embed", "omit"]] = None,
-        client_certificates: typing.Optional[typing.List[ClientCertificate]] = None
+        client_certificates: typing.Optional[typing.List[ClientCertificate]] = None,
     ) -> "Page":
         """Browser.new_page
 
@@ -13946,7 +13950,7 @@ class Browser(SyncContextManager):
         page: typing.Optional["Page"] = None,
         path: typing.Optional[typing.Union[str, pathlib.Path]] = None,
         screenshots: typing.Optional[bool] = None,
-        categories: typing.Optional[typing.Sequence[str]] = None
+        categories: typing.Optional[typing.Sequence[str]] = None,
     ) -> None:
         """Browser.start_tracing
 
@@ -14058,7 +14062,7 @@ class BrowserType(SyncBase):
         chromium_sandbox: typing.Optional[bool] = None,
         firefox_user_prefs: typing.Optional[
             typing.Dict[str, typing.Union[str, float, bool]]
-        ] = None
+        ] = None,
     ) -> "Browser":
         """BrowserType.launch
 
@@ -14235,7 +14239,7 @@ class BrowserType(SyncBase):
         ] = None,
         record_har_mode: typing.Optional[Literal["full", "minimal"]] = None,
         record_har_content: typing.Optional[Literal["attach", "embed", "omit"]] = None,
-        client_certificates: typing.Optional[typing.List[ClientCertificate]] = None
+        client_certificates: typing.Optional[typing.List[ClientCertificate]] = None,
     ) -> "BrowserContext":
         """BrowserType.launch_persistent_context
 
@@ -14489,7 +14493,7 @@ class BrowserType(SyncBase):
         *,
         timeout: typing.Optional[float] = None,
         slow_mo: typing.Optional[float] = None,
-        headers: typing.Optional[typing.Dict[str, str]] = None
+        headers: typing.Optional[typing.Dict[str, str]] = None,
     ) -> "Browser":
         """BrowserType.connect_over_cdp
 
@@ -14544,7 +14548,7 @@ class BrowserType(SyncBase):
         timeout: typing.Optional[float] = None,
         slow_mo: typing.Optional[float] = None,
         headers: typing.Optional[typing.Dict[str, str]] = None,
-        expose_network: typing.Optional[str] = None
+        expose_network: typing.Optional[str] = None,
     ) -> "Browser":
         """BrowserType.connect
 
@@ -14728,7 +14732,7 @@ class Tracing(SyncBase):
         title: typing.Optional[str] = None,
         snapshots: typing.Optional[bool] = None,
         screenshots: typing.Optional[bool] = None,
-        sources: typing.Optional[bool] = None
+        sources: typing.Optional[bool] = None,
     ) -> None:
         """Tracing.start
 
@@ -14967,7 +14971,7 @@ class Locator(SyncBase):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Locator.check
 
@@ -15037,7 +15041,7 @@ class Locator(SyncBase):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Locator.click
 
@@ -15130,7 +15134,7 @@ class Locator(SyncBase):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Locator.dblclick
 
@@ -15196,7 +15200,7 @@ class Locator(SyncBase):
         type: str,
         event_init: typing.Optional[typing.Dict] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """Locator.dispatch_event
 
@@ -15261,7 +15265,7 @@ class Locator(SyncBase):
         expression: str,
         arg: typing.Optional[typing.Any] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> typing.Any:
         """Locator.evaluate
 
@@ -15356,7 +15360,7 @@ class Locator(SyncBase):
         expression: str,
         arg: typing.Optional[typing.Any] = None,
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> "JSHandle":
         """Locator.evaluate_handle
 
@@ -15407,7 +15411,7 @@ class Locator(SyncBase):
         *,
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
-        force: typing.Optional[bool] = None
+        force: typing.Optional[bool] = None,
     ) -> None:
         """Locator.fill
 
@@ -15458,7 +15462,7 @@ class Locator(SyncBase):
         *,
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
-        force: typing.Optional[bool] = None
+        force: typing.Optional[bool] = None,
     ) -> None:
         """Locator.clear
 
@@ -15507,7 +15511,7 @@ class Locator(SyncBase):
         has_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has_not_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has: typing.Optional["Locator"] = None,
-        has_not: typing.Optional["Locator"] = None
+        has_not: typing.Optional["Locator"] = None,
     ) -> "Locator":
         """Locator.locator
 
@@ -15562,7 +15566,7 @@ class Locator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Locator.get_by_alt_text
 
@@ -15599,7 +15603,7 @@ class Locator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Locator.get_by_label
 
@@ -15640,7 +15644,7 @@ class Locator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Locator.get_by_placeholder
 
@@ -15772,7 +15776,7 @@ class Locator(SyncBase):
         name: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         pressed: typing.Optional[bool] = None,
         selected: typing.Optional[bool] = None,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Locator.get_by_role
 
@@ -15919,7 +15923,7 @@ class Locator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Locator.get_by_text
 
@@ -15983,7 +15987,7 @@ class Locator(SyncBase):
         self,
         text: typing.Union[str, typing.Pattern[str]],
         *,
-        exact: typing.Optional[bool] = None
+        exact: typing.Optional[bool] = None,
     ) -> "Locator":
         """Locator.get_by_title
 
@@ -16106,7 +16110,7 @@ class Locator(SyncBase):
         has_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has_not_text: typing.Optional[typing.Union[str, typing.Pattern[str]]] = None,
         has: typing.Optional["Locator"] = None,
-        has_not: typing.Optional["Locator"] = None
+        has_not: typing.Optional["Locator"] = None,
     ) -> "Locator":
         """Locator.filter
 
@@ -16303,7 +16307,7 @@ class Locator(SyncBase):
         timeout: typing.Optional[float] = None,
         trial: typing.Optional[bool] = None,
         source_position: typing.Optional[Position] = None,
-        target_position: typing.Optional[Position] = None
+        target_position: typing.Optional[Position] = None,
     ) -> None:
         """Locator.drag_to
 
@@ -16403,7 +16407,7 @@ class Locator(SyncBase):
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
         force: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Locator.hover
 
@@ -16719,7 +16723,7 @@ class Locator(SyncBase):
         *,
         delay: typing.Optional[float] = None,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """Locator.press
 
@@ -16792,7 +16796,7 @@ class Locator(SyncBase):
         scale: typing.Optional[Literal["css", "device"]] = None,
         mask: typing.Optional[typing.Sequence["Locator"]] = None,
         mask_color: typing.Optional[str] = None,
-        style: typing.Optional[str] = None
+        style: typing.Optional[str] = None,
     ) -> bytes:
         """Locator.screenshot
 
@@ -16920,7 +16924,7 @@ class Locator(SyncBase):
         ] = None,
         timeout: typing.Optional[float] = None,
         no_wait_after: typing.Optional[bool] = None,
-        force: typing.Optional[bool] = None
+        force: typing.Optional[bool] = None,
     ) -> typing.List[str]:
         """Locator.select_option
 
@@ -17003,7 +17007,7 @@ class Locator(SyncBase):
         self,
         *,
         force: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """Locator.select_text
 
@@ -17038,7 +17042,7 @@ class Locator(SyncBase):
         ],
         *,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """Locator.set_input_files
 
@@ -17109,7 +17113,7 @@ class Locator(SyncBase):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Locator.tap
 
@@ -17195,7 +17199,7 @@ class Locator(SyncBase):
         *,
         delay: typing.Optional[float] = None,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """Locator.type
 
@@ -17234,7 +17238,7 @@ class Locator(SyncBase):
         *,
         delay: typing.Optional[float] = None,
         timeout: typing.Optional[float] = None,
-        no_wait_after: typing.Optional[bool] = None
+        no_wait_after: typing.Optional[bool] = None,
     ) -> None:
         """Locator.press_sequentially
 
@@ -17290,7 +17294,7 @@ class Locator(SyncBase):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Locator.uncheck
 
@@ -17395,7 +17399,7 @@ class Locator(SyncBase):
         timeout: typing.Optional[float] = None,
         state: typing.Optional[
             Literal["attached", "detached", "hidden", "visible"]
-        ] = None
+        ] = None,
     ) -> None:
         """Locator.wait_for
 
@@ -17438,7 +17442,7 @@ class Locator(SyncBase):
         timeout: typing.Optional[float] = None,
         force: typing.Optional[bool] = None,
         no_wait_after: typing.Optional[bool] = None,
-        trial: typing.Optional[bool] = None
+        trial: typing.Optional[bool] = None,
     ) -> None:
         """Locator.set_checked
 
@@ -17669,7 +17673,7 @@ class APIRequestContext(SyncBase):
         fail_on_status_code: typing.Optional[bool] = None,
         ignore_https_errors: typing.Optional[bool] = None,
         max_redirects: typing.Optional[int] = None,
-        max_retries: typing.Optional[int] = None
+        max_retries: typing.Optional[int] = None,
     ) -> "APIResponse":
         """APIRequestContext.delete
 
@@ -17752,7 +17756,7 @@ class APIRequestContext(SyncBase):
         fail_on_status_code: typing.Optional[bool] = None,
         ignore_https_errors: typing.Optional[bool] = None,
         max_redirects: typing.Optional[int] = None,
-        max_retries: typing.Optional[int] = None
+        max_retries: typing.Optional[int] = None,
     ) -> "APIResponse":
         """APIRequestContext.head
 
@@ -17835,7 +17839,7 @@ class APIRequestContext(SyncBase):
         fail_on_status_code: typing.Optional[bool] = None,
         ignore_https_errors: typing.Optional[bool] = None,
         max_redirects: typing.Optional[int] = None,
-        max_retries: typing.Optional[int] = None
+        max_retries: typing.Optional[int] = None,
     ) -> "APIResponse":
         """APIRequestContext.get
 
@@ -17930,7 +17934,7 @@ class APIRequestContext(SyncBase):
         fail_on_status_code: typing.Optional[bool] = None,
         ignore_https_errors: typing.Optional[bool] = None,
         max_redirects: typing.Optional[int] = None,
-        max_retries: typing.Optional[int] = None
+        max_retries: typing.Optional[int] = None,
     ) -> "APIResponse":
         """APIRequestContext.patch
 
@@ -18013,7 +18017,7 @@ class APIRequestContext(SyncBase):
         fail_on_status_code: typing.Optional[bool] = None,
         ignore_https_errors: typing.Optional[bool] = None,
         max_redirects: typing.Optional[int] = None,
-        max_retries: typing.Optional[int] = None
+        max_retries: typing.Optional[int] = None,
     ) -> "APIResponse":
         """APIRequestContext.put
 
@@ -18096,7 +18100,7 @@ class APIRequestContext(SyncBase):
         fail_on_status_code: typing.Optional[bool] = None,
         ignore_https_errors: typing.Optional[bool] = None,
         max_redirects: typing.Optional[int] = None,
-        max_retries: typing.Optional[int] = None
+        max_retries: typing.Optional[int] = None,
     ) -> "APIResponse":
         """APIRequestContext.post
 
@@ -18211,7 +18215,7 @@ class APIRequestContext(SyncBase):
         fail_on_status_code: typing.Optional[bool] = None,
         ignore_https_errors: typing.Optional[bool] = None,
         max_redirects: typing.Optional[int] = None,
-        max_retries: typing.Optional[int] = None
+        max_retries: typing.Optional[int] = None,
     ) -> "APIResponse":
         """APIRequestContext.fetch
 
@@ -18338,7 +18342,7 @@ class APIRequest(SyncBase):
         storage_state: typing.Optional[
             typing.Union[StorageState, str, pathlib.Path]
         ] = None,
-        client_certificates: typing.Optional[typing.List[ClientCertificate]] = None
+        client_certificates: typing.Optional[typing.List[ClientCertificate]] = None,
     ) -> "APIRequestContext":
         """APIRequest.new_context
 
@@ -18419,7 +18423,7 @@ class PageAssertions(SyncBase):
         self,
         title_or_reg_exp: typing.Union[typing.Pattern[str], str],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """PageAssertions.to_have_title
 
@@ -18456,7 +18460,7 @@ class PageAssertions(SyncBase):
         self,
         title_or_reg_exp: typing.Union[typing.Pattern[str], str],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """PageAssertions.not_to_have_title
 
@@ -18484,7 +18488,7 @@ class PageAssertions(SyncBase):
         url_or_reg_exp: typing.Union[str, typing.Pattern[str]],
         *,
         timeout: typing.Optional[float] = None,
-        ignore_case: typing.Optional[bool] = None
+        ignore_case: typing.Optional[bool] = None,
     ) -> None:
         """PageAssertions.to_have_url
 
@@ -18525,7 +18529,7 @@ class PageAssertions(SyncBase):
         url_or_reg_exp: typing.Union[typing.Pattern[str], str],
         *,
         timeout: typing.Optional[float] = None,
-        ignore_case: typing.Optional[bool] = None
+        ignore_case: typing.Optional[bool] = None,
     ) -> None:
         """PageAssertions.not_to_have_url
 
@@ -18568,7 +18572,7 @@ class LocatorAssertions(SyncBase):
         *,
         use_inner_text: typing.Optional[bool] = None,
         timeout: typing.Optional[float] = None,
-        ignore_case: typing.Optional[bool] = None
+        ignore_case: typing.Optional[bool] = None,
     ) -> None:
         """LocatorAssertions.to_contain_text
 
@@ -18662,7 +18666,7 @@ class LocatorAssertions(SyncBase):
         *,
         use_inner_text: typing.Optional[bool] = None,
         timeout: typing.Optional[float] = None,
-        ignore_case: typing.Optional[bool] = None
+        ignore_case: typing.Optional[bool] = None,
     ) -> None:
         """LocatorAssertions.not_to_contain_text
 
@@ -18699,7 +18703,7 @@ class LocatorAssertions(SyncBase):
         value: typing.Union[str, typing.Pattern[str]],
         *,
         ignore_case: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_have_attribute
 
@@ -18742,7 +18746,7 @@ class LocatorAssertions(SyncBase):
         value: typing.Union[str, typing.Pattern[str]],
         *,
         ignore_case: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_attribute
 
@@ -18780,7 +18784,7 @@ class LocatorAssertions(SyncBase):
             str,
         ],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_have_class
 
@@ -18837,7 +18841,7 @@ class LocatorAssertions(SyncBase):
             str,
         ],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_class
 
@@ -18914,7 +18918,7 @@ class LocatorAssertions(SyncBase):
         name: str,
         value: typing.Union[str, typing.Pattern[str]],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_have_css
 
@@ -18951,7 +18955,7 @@ class LocatorAssertions(SyncBase):
         name: str,
         value: typing.Union[str, typing.Pattern[str]],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_css
 
@@ -18978,7 +18982,7 @@ class LocatorAssertions(SyncBase):
         self,
         id: typing.Union[str, typing.Pattern[str]],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_have_id
 
@@ -19010,7 +19014,7 @@ class LocatorAssertions(SyncBase):
         self,
         id: typing.Union[str, typing.Pattern[str]],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_id
 
@@ -19095,7 +19099,7 @@ class LocatorAssertions(SyncBase):
         self,
         value: typing.Union[str, typing.Pattern[str]],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_have_value
 
@@ -19129,7 +19133,7 @@ class LocatorAssertions(SyncBase):
         self,
         value: typing.Union[str, typing.Pattern[str]],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_value
 
@@ -19156,7 +19160,7 @@ class LocatorAssertions(SyncBase):
             typing.Sequence[typing.Union[typing.Pattern[str], str]],
         ],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_have_values
 
@@ -19209,7 +19213,7 @@ class LocatorAssertions(SyncBase):
             typing.Sequence[typing.Union[typing.Pattern[str], str]],
         ],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_values
 
@@ -19244,7 +19248,7 @@ class LocatorAssertions(SyncBase):
         *,
         use_inner_text: typing.Optional[bool] = None,
         timeout: typing.Optional[float] = None,
-        ignore_case: typing.Optional[bool] = None
+        ignore_case: typing.Optional[bool] = None,
     ) -> None:
         """LocatorAssertions.to_have_text
 
@@ -19337,7 +19341,7 @@ class LocatorAssertions(SyncBase):
         *,
         use_inner_text: typing.Optional[bool] = None,
         timeout: typing.Optional[float] = None,
-        ignore_case: typing.Optional[bool] = None
+        ignore_case: typing.Optional[bool] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_text
 
@@ -19372,7 +19376,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         attached: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_be_attached
 
@@ -19403,7 +19407,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         timeout: typing.Optional[float] = None,
-        checked: typing.Optional[bool] = None
+        checked: typing.Optional[bool] = None,
     ) -> None:
         """LocatorAssertions.to_be_checked
 
@@ -19434,7 +19438,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         attached: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_be_attached
 
@@ -19519,7 +19523,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         editable: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_be_editable
 
@@ -19552,7 +19556,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         editable: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_be_editable
 
@@ -19617,7 +19621,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         enabled: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_be_enabled
 
@@ -19648,7 +19652,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         enabled: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_be_enabled
 
@@ -19714,7 +19718,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         visible: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_be_visible
 
@@ -19755,7 +19759,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         visible: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_be_visible
 
@@ -19820,7 +19824,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         ratio: typing.Optional[float] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_be_in_viewport
 
@@ -19859,7 +19863,7 @@ class LocatorAssertions(SyncBase):
         self,
         *,
         ratio: typing.Optional[float] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_be_in_viewport
 
@@ -19884,7 +19888,7 @@ class LocatorAssertions(SyncBase):
         description: typing.Union[str, typing.Pattern[str]],
         *,
         ignore_case: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_have_accessible_description
 
@@ -19923,7 +19927,7 @@ class LocatorAssertions(SyncBase):
         name: typing.Union[str, typing.Pattern[str]],
         *,
         ignore_case: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_accessible_description
 
@@ -19954,7 +19958,7 @@ class LocatorAssertions(SyncBase):
         name: typing.Union[str, typing.Pattern[str]],
         *,
         ignore_case: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_have_accessible_name
 
@@ -19993,7 +19997,7 @@ class LocatorAssertions(SyncBase):
         name: typing.Union[str, typing.Pattern[str]],
         *,
         ignore_case: typing.Optional[bool] = None,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_accessible_name
 
@@ -20106,7 +20110,7 @@ class LocatorAssertions(SyncBase):
             "treeitem",
         ],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.to_have_role
 
@@ -20222,7 +20226,7 @@ class LocatorAssertions(SyncBase):
             "treeitem",
         ],
         *,
-        timeout: typing.Optional[float] = None
+        timeout: typing.Optional[float] = None,
     ) -> None:
         """LocatorAssertions.not_to_have_role
 
